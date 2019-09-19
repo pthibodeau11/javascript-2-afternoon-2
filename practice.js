@@ -131,20 +131,35 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
 //Code Here
 
+// function divider(numbersArray){
+//   var evens = []
+//   var odds = []
+//   for (let i = 0; i < numbersArray.length; i++){
+//     if (numbersArray [i] % 2 === 0){
+//       evens.push(numbersArray[i]);
+//     }
+//     else {
+//       odds.push(numbersArray[i]);
+//     }
+//   }
+//   return [evens, odds]
+// }
+// divider(numbersArray)
+
 function divider(numbersArray){
-  var evens = []
-  var odds = []
-  for (let i = 0; i < numbersArray.length; i++){
-    if (numbersArray [i] % 2 === 0){
-      evens.push(numbersArray[i]);
-    }
-    else {
-      odds.push(numbersArray[i]);
+  let evensArray = [];
+  let oddsArray = [];
+
+  for (let i=0; i< numbersArray.length; i++){
+    if (numbersArray[i] % 2 === 0 || numbersArray[i] % 2 !== 0){
+      evensArray.push(numbersArray[i])
+    } else {
+      oddsArray.push(numbersArray[i])
     }
   }
-  return [evens, odds]
+  return [evensArray, oddsArray]
 }
-divider(numbersArray)
+
 
 ////////// PROBLEM 7 //////////
 
